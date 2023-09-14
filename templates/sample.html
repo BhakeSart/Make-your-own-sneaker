@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="og:title" content="HealthOrzo">
+    <meta name="author" content="Sarthak Bhake">
+    <meta name="Keywords" content="Flask, Machine Learning, Artificial Intelligence, AI, ML, Web Development">
+    <meta name="description" content="A Prediction website for diseases using Machine Learning."> -->
+    <title>Sneaker Generator</title>
+    <!-- <link rel="icon" href="{{ url_for('static', filename = 'logo1.png') }}" type="image/icon type"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap">
+    
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #ade8f4;
+            /* background-image: url("/Users/sarthak/Desktop/sneaker/static/bg-image.png"); */
+        }
+
+        header {
+            height: 50px;
+        }
+
+        footer {
+            height: 75px;
+            background: black;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            padding: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"
+        style="background-color: black !important; height: 80px; ">
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename = 'logo1.png') }} " height="60px"
+            width="75px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <center>
+                <b><h2 style=" font-size :xx-large; color:white; transform:translateX(565px); font-family: 'Lobster Two', cursive; ";>sneakyKicks</h2></b>
+            </center>
+            
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+        <center>
+            <div class="container-fluid" style="margin-bottom: 20px;">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <center>
+                            <h1>Sneaker Generator</h1>
+                        </center>
+                        <div class="card card-body" style="border: 1px solid black; border-radius: 1em;">
+                            <form class="form-horizontal" action="/" method="POST">
+                                <div class="form-group">
+                                    <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="color"
+                                        placeholder="Color of the Shoe EX:Black"> -->
+                                        <!-- <select class="form-control" style="border: 1px solid black;" placeholder="Color of the Shoe Ex:Black">
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                        </select> -->
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="color"
+                                                placeholder="Color of the Shoe">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="brand"
+                                                placeholder="Brand of the Shoe">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="type"
+                                                placeholder="Type of the Shoe">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="insp"
+                                                placeholder="Inspiration">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="sole"
+                                                placeholder="Color of the Sole">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="heel"
+                                                placeholder="Color of the Heel">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="toe"
+                                                placeholder="Color of the Toe">
+                                        </div>
+                                        <div class="form-group">
+                                            <input style="border: 1px solid black;" class="form-control" type="text" name="upper"
+                                                placeholder="Color of the Upper">
+                                        </div>
+                                        <!-- <select class="form-control" style="border: 3px solid black;" id="color">
+                                            <option value="">Color of the Shoe</option>
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                          </select>
+                                        
+                                        <br>
+
+                                          <select class="form-control" style="border: 3px solid black;" id="brand">
+                                            <option value="">Brand of the Shoe</option>
+                                            <option value="nike">Nike</option>
+                                            <option value="add">Adidas</option>
+                                            <option value="conv">Converse</option>
+                                            <option value="vans">Vans</option>
+                                            <option value="puma">Puma</option>
+                                            <option value="reebok">Reebok</option>
+                                            <option value="nb">New Balance</option>\
+                                            <option value="asics">Asics</option>
+                                            <option value="jordan">Jordan</option>
+                                            <option value="underarmour">Under Armour</option>
+                                          </select>
+<br>
+                                          <select class="form-control" style="border: 3px solid black;" id="type">
+                                            <option value="">Type of the Shoe</option>
+                                            <option value="high">High Top</option>
+                                            <option value="low">Low Top</option>
+                                            <option value="mid">Mid Top</option>
+                                          </select>
+                                          <br>
+                                          
+                                          
+                                          <select class="form-control" style="border: 3px solid black;" id="insp">
+                                            <option value="">Inspiration of your shoe</option>
+                                            <option value="J1">Air Jordan 1</option>
+                                            <option value="J3">Air Jordan 3</option>
+                                            <option value="J4">Air Jordan 4</option>
+                                            <option value="YV2">Yeezy 350 V2</option>
+                                            <option value="Y500">Yeezy 500</option>
+                                            <option value="Y700">Yeezy 700</option>
+                                            <option value="AF1">Air Force 1</option>
+                                            <option value="Dunks">Dunks</option>
+                                            <option value="SBDunks">SB Dunks</option>
+                                            <option value="AM90">Air Max 90</option>
+                                          </select>
+                                          <br>
+                                          <select class="form-control" style="border: 3px solid black;" id="sole">
+                                            <option value="">Color of the Sole</option>
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                          </select>
+                                        <br>
+                                        <select class="form-control" style="border: 3px solid black;" id="heel" >
+                                            <option value="">Color of the Heel</option>
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                          </select>
+                                          <br>
+                                          <select class="form-control" style="border: 3px solid black;" id="toe" >
+                                            <option value="">Color of the Toe</option>
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                          </select>
+                                          <br>
+                                          <select class="form-control" style="border: 3px solid black;" id="upper">
+                                            <option value="">Color of the Upper</option>
+                                            <option value="black">Black</option>
+                                            <option value="red">Red</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="indigo">Indigo</option>
+                                            <option value="violet">Violet</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                          </select> -->
+
+                                    
+
+                                
+                                        
+                                        
+                                          
+                                        
+        
+                                </div>
+                                
+
+
+                                <input type="submit" class="btn btn-info btn-block" value="Sneak a Pick!!">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </center>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    {% if response %}
+    <center>
+        <h3>This is what you've made!!</h3>
+        <img  src="{{response}}"  alt="Sneaker" width="800" height="800"/>
+    </center>
+    
+    <!-- <p>{{ response }}</p> -->
+    <!-- <img src= {{data}}   width="500" height="600"> -->
+    <!-- <a href="{{data}}"></a> -->
+    
+        
+        
+    {% endif %}
+</body>
+
+</html>
